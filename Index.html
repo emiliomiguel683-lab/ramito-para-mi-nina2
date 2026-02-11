@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para ti 💖</title>
+
+<style>
+body {
+  background: linear-gradient(#ffd6e8, #fff);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding-top: 40px;
+}
+
+h1 {
+  color: #d6336c;
+}
+
+.ramo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.flor {
+  width: 90px;
+  height: 90px;
+  background: pink;
+  border-radius: 50%;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.flor:hover {
+  transform: scale(1.1);
+}
+
+.mensaje {
+  margin-top: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  color: #444;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌸 Para mi princesita 🌸</h1>
+<p>Toca una flor 💗</p>
+
+<div class="ramo">
+  <div class="flor" onclick="mostrarMensaje(0)">🌸</div>
+  <div class="flor" onclick="mostrarMensaje(1)">🌷</div>
+  <div class="flor" onclick="mostrarMensaje(2)">🌹</div>
+  <div class="flor" onclick="mostrarMensaje(3)">🌼</div>
+  <div class="flor" onclick="mostrarMensaje(4)">💐</div>
+</div>
+
+<div id="mensaje" class="mensaje"></div>
+
+<script>
+const mensajes = [
+  "Te amo porque contigo todo se siente más bonito 💕",
+  "Eres mi lugar seguro, incluso en la distancia 🫶🏻",
+  "Pensarte me calma, escucharte me alegra 💖",
+  "No importa el día, siempre pienso en ti 🌷",
+  "Este ramito es pequeño, pero mi amor es enorme 💐"
+];
+
+function mostrarMensaje(numero) {
+  const divMensaje = document.getElementById("mensaje");
+  divMensaje.innerText = mensajes[numero];
+  divMensaje.style.display = "block";
+}
+</script>
+
+</body>
+</html>
